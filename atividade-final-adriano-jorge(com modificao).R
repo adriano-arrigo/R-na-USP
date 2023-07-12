@@ -23,7 +23,10 @@ plot(x = guerras$anos, y = guerras$mortes,
      
      )
 
-
+meu <- guerras %>% 
+        group_by(pais) %>% 
+        distinct(anos) %>% 
+        count()
 
 legend(x = "topleft",
        legend = meu,
